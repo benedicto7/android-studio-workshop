@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">intro-to-debugging</string>
+    <string name="first_time_debugging_with_android_studio">First Time Debugging With Android Studio</string>
+</resources>
