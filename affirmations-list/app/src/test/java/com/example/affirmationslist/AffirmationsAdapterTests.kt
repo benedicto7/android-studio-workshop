@@ -16,14 +16,12 @@
 package com.example.affirmations
 
 import android.content.Context
-import com.example.affirmations.adapter.ItemAdapter
-import com.example.affirmations.model.Affirmation
+import com.example.affirmationslist.R
 import com.example.affirmationslist.adapter.ItemAdapter
 import com.example.affirmationslist.model.Affirmation
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockito.Mockito.mock
-import com.example.affirmationslist.R
 
 class AffirmationsAdapterTests {
 
