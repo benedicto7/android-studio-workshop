@@ -1,0 +1,4 @@
+#Fri Jun 30 10:37:55 EDT 2023
+base.0=C\:\\Users\\Ben.Elpidius\\Twisthink\\android-basics-kotlin-dessert-clicker-app\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
