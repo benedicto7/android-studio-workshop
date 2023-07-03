@@ -3,6 +3,7 @@ package com.example.affirmationslist.data
 import com.example.affirmationslist.R
 import com.example.affirmationslist.model.Affirmation
 
+// Provides affirmations data to ItemAdapter() class
 class Datasource {
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(

@@ -17,7 +17,11 @@ class MainActivity : AppCompatActivity() {
         // Initialize data.
         val myDataset = Datasource().loadAffirmations()
 
+        // RecyclerView to display data
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+
+        // Display data to RecyclerView using an adapter
+        // Adapter acts as bridge between a data (Datasource) and a view (RecyclerView)
         recyclerView.adapter = ItemAdapter(this, myDataset)
 
         // Use this setting to improve performance if you know that changes
