@@ -13,9 +13,6 @@ import com.example.unscramble.data.SCORE_INCREASE
 import com.example.unscramble.data.MAX_NO_OF_WORDS
 
 class GameViewModel : ViewModel() {
-    init {
-        resetGame()
-    }
 
     // Game UI State
     private val _uiState = MutableStateFlow(GameUiState())
@@ -28,15 +25,8 @@ class GameViewModel : ViewModel() {
     var userGuess by mutableStateOf("")
         private set
 
-    private fun pickRandomWordandShuffle(): String {
-        // Continue picking up a new rankdom word until you get one that hasn't been used before
-        currentWord = allWords.random()
-        if (usedWords.contains(currentWord)) {
-            return pickRandomWordandShuffle()
-        } else {
-            usedWords.add(currentWord)
-            return shuffleCurrentWord(currentWord)
-        }
+    init {
+        resetGame()
     }
 
     private fun shuffleCurrentWord(word: String): String {
@@ -49,6 +39,17 @@ class GameViewModel : ViewModel() {
         }
 
         return String(tempWord)
+    }
+
+    private fun pickRandomWordandShuffle(): String {
+        // Continue picking up a new rankdom word until you get one that hasn't been used before
+        currentWord = allWords.random()
+        if (usedWords.contains(currentWord)) {
+            return pickRandomWordandShuffle()
+        } else {
+            usedWords.add(currentWord)
+            return shuffleCurrentWord(currentWord)
+        }
     }
 
     fun resetGame() {
